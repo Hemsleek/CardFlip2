@@ -11,3 +11,196 @@ body {
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+.container {
+    margin: 5vh auto;
+    background: transparent;
+    width: 31vw;
+    min-height: 40vh;
+    height: auto;
+    /* padding: 1rem; */
+    perspective: 1000px;
+}
+
+.card {
+    width: 100%;
+    height: 40vh;
+    transform-style: preserve-3d;
+    position: relative;
+    transition: transform .8s;
+}
+
+.card-front,
+.card-back {
+    margin: 0 auto;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #f5f5f5;
+    border-radius: 5px;
+    background: #ca1d19;
+    color: #fff;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    font-size: 1rem;
+}
+
+.card-front header {
+    padding: 1rem 0.8rem;
+}
+
+.content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header h2 {
+    margin: 0;
+    text-align: right;
+}
+
+.card-front section {
+    padding: 0 0.8rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-number pre {
+    /*   background-size:2rem 2rem; */
+    font-family: "courier new", courier, monospace;
+    font-weight: lighter;
+    font-size: 1.2rem;
+    padding: 0 0.8rem;
+}
+
+img[alt="visa-img"] {
+    height: 70px;
+    width: 70px;
+}
+
+section .bottom {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.bottom .holder-name {
+    display: flex;
+}
+
+.holder-name .expiration {
+    display: flex;
+}
+
+.bottom .holder-name .name {
+    font-weight: bolder;
+}
+
+.card-back {
+    font-size: 0.7rem;
+    height: auto;
+}
+
+.card-back .phone-number {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.phone-number span {
+    margin: 0.2rem;
+    text-align: center;
+}
+
+.phone-number:after {
+    margin: 0.3rem 0;
+    content: "";
+    bottom: 0;
+    padding: 0;
+    right: 0;
+    width: 100%;
+    height: 35px;
+    background: black;
+}
+
+.card-back .cvv {
+    display: flex;
+    font-size: 0.55rem;
+    justify-content: space-between;
+    padding: 0 0.7rem;
+}
+
+.cvv .cvv-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.cvv .cvv-serial {
+    font-size: 0.4rem;
+    margin-top: 0.7rem;
+}
+
+.cvv .cvv-panel {
+    background: white;
+    color: black;
+    text-align: right;
+    padding: 0.1rem 0.5rem;
+    font-size: 0.9rem;
+    font-weight: bolder;
+    margin: 0.7rem 0;
+    position: relative;
+}
+
+.cvv .cvv-panel:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: -0.2rem;
+    width: 84%;
+    height: 128%;
+    border-radius: 2px;
+    background: repeating-linear-gradient( white, orange, white, orange, white, orange, white, orange);
+}
+
+.card-back .silver-panel {
+    background: silver;
+    margin-left: 0.7rem;
+    border-radius: 7px;
+    height: 58px;
+    width: 86px;
+}
+
+.card-back .info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 0.42rem;
+    padding: 0.3rem;
+}
+
+.info p {
+    margin: 0;
+    padding: 0 0.3rem 0.3rem 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.info .address {
+    padding: 0.4rem;
+    border-left: 2px solid white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.address .email-address {
+    align-self: flex-end;
+    text-align: right;
+}
+
+.active .card {
+    transform: rotateX(-180deg)
+}
+
+.card .card-back {
+    transform: rotateX(180deg);
+}

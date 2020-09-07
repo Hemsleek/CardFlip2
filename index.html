@@ -5,11 +5,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ATM CardFlip</title>
+    <script src="jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
+    <div class="container">
 
+        <div class="card">
+            <div class="card-front">
+                <div class="content">
+
+                    <header>
+                        <h2>
+                            UBA
+                        </h2>
+                        <span class="brand-logo"></span>
+                    </header>
+                    <section>
+                        <div class="currency-module">
+                            &#x20a6;
+                        </div>
+                        <div class="card-type">
+                            <span> <strong>debit</strong> </span>
+                        </div>
+                    </section>
+                    <div class="card-number">
+                        <pre>5534    6782    9810    2231</pre>
+                    </div>
+                    <section class="bottom">
+                        <img src="./media/arrow-left.svg" alt="arrow-left">
+                        <div class="holder-name">
+                            <span class="name">ASIYANBI MAYOWA</span>
+                            <div class="expiration">
+                                <span class="title">EXPRESS <br> END OF <img src="./media/arrow-right.svg" alt="arrow-right"></span>
+                                <span class="date">10/22</span>
+                            </div>
+                            <img src="./media/visa.svg" alt="visa-img">
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="card-back">
+                <div class="phone-number">
+                    <span> Tel:+234 | 2676784, +234 788 2346 990, +234 534 5672 897<strong>(Toll free in Nigeria)</strong> </span>
+                </div>
+                <div class="cvv">
+                    <div class="cvv-wrapper">
+                        <span class="text">AUTHORISED SIGNATURE NOT VALID UNLESS SIGNED</span>
+
+                        <span class="cvv-panel">
+                  890
+                </span>
+                    </div>
+                    <span class="cvv-serial">NVSME330927278109</span>
+
+                </div>
+                <div class="silver-panel"></div>
+                <div class="info">
+                    <p>Use this card to enroll on UBA Online Banking platforms to manage your account,check balance transfer money,pay bills,buy airtime and do much more</p>
+                    <div class="address">
+                        <div class="app-web">
+                            <div class="images"></div>
+                            <span class="product-location">
+                    UBA Online Banking <br>(Download from Apps Stores)
+                  </span>
+                        </div>
+                        <div class="email-address">
+                            <span>Email.cfc@ubagroup.com <br> www.ubagroup.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $(".container").click(function() {
+                $(this).toggleClass("active");
+            });
+        })
+    </script>
 </body>
 
 </html>
