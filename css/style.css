@@ -13,10 +13,10 @@ body {
 }
 
 .container {
-    margin: 5vh auto;
+    margin: 20vh auto;
     background: transparent;
     width: 31vw;
-    height: 32vh;
+    height: 40vh;
     perspective: 1000px;
 }
 
@@ -40,6 +40,7 @@ body {
     background: #ca1d19;
     color: #fff;
     backface-visibility: hidden;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .8);
 }
 
 .card-front {
@@ -47,12 +48,46 @@ body {
 }
 
 .card-front header {
-    padding: 1rem 1.4rem;
+    padding: .8rem 1.4rem .6rem;
+    display: flex;
+    justify-content: flex-end;
 }
 
 header h2 {
     margin: 0;
-    text-align: right;
+    margin-right: .6rem;
+    font-size: 2rem;
+}
+
+img[alt="brand-logo"] {
+    width: 30px;
+    height: 30px;
+}
+
+.currency-module,
+.card-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.currency-module img {
+    margin-top: .2rem;
+    width: 40px;
+    height: 40px;
+}
+
+.card-type img {
+    align-self: flex-end;
+    margin-bottom: 1rem;
+    transform: rotate(90deg);
+    width: 30px;
+    height: 30px;
+}
+
+.card-type span {
+    margin-right: .6rem;
+    font-size: 1.1rem;
 }
 
 .card-front section.first {
@@ -65,12 +100,12 @@ header h2 {
     padding: 0 1.4rem;
     font-family: "courier new", courier, monospace;
     font-weight: lighter;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
 
 .visa-wrapper {
-    width: 80px;
-    height: 35px;
+    width: 95px;
+    height: 38px;
     background: white;
 }
 
@@ -80,7 +115,7 @@ img[alt="visa-img"] {
 }
 
 section.bottom {
-    padding: 0 1.4rem;
+    padding: 0 1.4rem .5rem;
     display: flex;
     justify-content: space-between;
     font-size: .7rem;
@@ -105,6 +140,7 @@ section.bottom {
 
 .holder-name .title {
     margin-top: .1rem;
+    margin-left: -2.5rem;
 }
 
 img[alt="arrow-right"] {
@@ -194,8 +230,9 @@ img[alt="arrow-right"] {
 .card-back .info {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    font-size: 0.42rem;
-    padding: 0.3rem;
+    font-size: 0.46rem;
+    padding: 0.1rem;
+    height: 60px;
 }
 
 .info p {
@@ -206,15 +243,31 @@ img[alt="arrow-right"] {
 }
 
 .info .address {
-    padding: 0.4rem;
+    padding: 0.2rem 0.4rem 0rem;
     border-left: 2px solid white;
     display: flex;
     justify-content: space-between;
 }
 
+.app-web {
+    display: flex;
+    flex-direction: column;
+}
+
+.app-web .images img {
+    width: 25px;
+    height: 25px;
+    margin-bottom: .3rem;
+}
+
+.images img+img {
+    margin-left: 1.2rem;
+}
+
 .address .email-address {
     align-self: flex-end;
     text-align: right;
+    margin-top: .4rem;
 }
 
 .active .card {
